@@ -1,0 +1,275 @@
+/* Base styles */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: larger;
+	font-weight: 200;
+	background-image: url("fen.jpg");
+	background-attachment: fixed;
+	color: #ebdbb2;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: #83a598;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+a:hover {
+	color: #458588;
+}
+
+ul li, ol li {
+	margin: 0.5em 0;
+}
+
+header, h1, h2, h3, h4 {
+	font-family: 'Titillium Web', sans-serif;
+	letter-spacing: 0.06em;
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h1 small, h2 small, h3 small, h4 small {
+	color: #a89984;
+	font-weight: 200;
+}
+
+main > section {
+	padding: 1em 2em;
+	border-radius: 1em;
+}
+main > section > h2:first-child {
+	margin-top: 0;
+}
+
+hr {
+	border: 0pt solid #a89984;
+	border-bottom-width: 1pt;
+	margin: 0 1em;
+}
+
+footer {
+	border-top: 1pt solid #665c54;
+	padding: 1em;
+	color: #a89984;
+	font-size: smaller;
+	text-align: center;
+}
+
+/* General styles */
+
+a.footnote-link {
+	font-size: 0.6em;
+	vertical-align: super;
+}
+
+ul.horizontal {
+	margin-top: -0.5em;
+	padding: 0;
+}
+
+ul.horizontal li {
+	display: inline-block;
+}
+
+ul.horizontal li + li::before {
+	content: "\2027";
+	padding: 0 0.5em;
+}
+
+.timeline {
+	padding-left: 0.5em;
+}
+.timeline section {
+	margin-top: 2.5em;
+	padding-left: 1em;
+	border-left: 5pt solid #665c54;
+}
+.timeline .company {
+	font-weight: 600;
+}
+.timeline .title {
+	font-weight: 300;
+}
+.timeline .period {
+	color: #a89984;
+	font-weight: 200;
+	font-size: smaller;
+}
+
+ol.footnote-list {
+	font-size: 0.7em;
+}
+
+ul.contact-list {
+
+}
+
+ul.contact-list li {
+	display: block;
+}
+
+a.social-link svg {
+	width: 1em;
+	height: 1em;
+	fill: #83a598;
+	margin-right: .5em;
+}
+
+a.social-link:hover svg  {
+	fill: #458588;
+}
+
+.twin-column {
+	display: flex;
+	justify-content: space-evenly;
+}
+.twin-column section {
+	max-width: 40%;
+}
+
+/* Page specific layout */
+
+#content-wrapper {
+	width: 55em;
+	margin: 1em auto;
+	background-color: #50494590;
+	backdrop-filter: blur(10px);
+	filter: drop-shadow(0px 0px 1em black);
+	border-radius: .3em;
+	border: 1pt solid #282828;
+}
+
+#banner-content {
+	display: flex;
+	height: 18em;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+}
+
+#banner-content > h1 {
+	font-weight: 100;
+}
+
+#banner-content > * {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	padding-left: 15%;
+}
+
+#tagline {
+	position: relative;
+	top: -0.8em;
+	letter-spacing: 0.08em;
+}
+
+#banner-content nav {
+	background-color: #665c54;
+	margin: 0;
+	border: solid #a89984;
+	border-width: 1pt 0;
+}
+
+#banner-content nav menu {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+	z-index: 1;
+}
+#banner-content nav menu li {
+	display: block;
+	margin: 1em;
+}
+
+#banner-content nav menu li a {
+	font-weight: 600;
+}
+
+#profile-image {
+	position: absolute;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+}
+
+#profile-image img {
+	position: relative;
+	left: -18em;
+	top: 3em;
+	height: 13em;
+	width: 13em;
+	border: 3pt solid #ebdbb2;
+	border-radius: 100%;
+	object-fit: cover;
+	object-position: 0 22%;
+	filter: brightness(79%) contrast(107%) sepia(35%);
+}
+
+/* Briefly flash the background of target element when an anchor link is clicked */
+.anchor-target:target {
+	animation: target-fade 1s;
+}
+
+@keyframes target-fade {
+    from { background-color: transparent }
+	40% { background-color: #665c54 }
+	to { background-color: transparent }
+}
+
+/* Adjust banner layout for smaller screens */
+
+@media (max-width: 1100px) {
+	#content-wrapper {
+		margin: 1em 1em;
+		width: auto;
+	}
+	#banner {
+		font-size: 0.85em;
+	}
+	#profile-image {
+		justify-content: left;
+	}
+	#profile-image img {
+		left: 2em;
+	}
+}
+@media (max-width: 750px) {
+	#profile-image {
+		position: static;
+		justify-content: center;
+	}
+	#profile-image img {
+		position: static;
+	}
+	#banner {
+		padding-top: 2em;
+	}
+	#banner-content {
+		height: auto;
+	}
+	#banner-content > * {
+		padding-left: 0;
+	}
+
+	.twin-column {
+		display: block;
+	}
+	.twin-column section {
+		max-width: none;
+	}
+}
+
