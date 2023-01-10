@@ -2,19 +2,25 @@
 	"trailingSlash": "auto",
 	"routes": [
 		{
-			"route": "/",
-			"redirect": "/cv",
-			"allowedRoles": ["authenticated"]
+			"route": "/login",
+			"rewrite": "/.auth/login/aad"
 		},
 		{
 			"route": "/cv",
-			"rewrite": "cv.html",
-			"allowedRoles": ["authenticated"]
+			"rewrite": "index.html"
+		},
+		{
+			"route": "/",
+			"redirect": "/cv"
+		},
+		{
+			"route": "/*",
+			"allowedRoles": ["reader"]
 		}
 	],
 	"responseOverrides": {
 		"401": {
-			"redirect": "/.auth/login/github?post_login_redirect_uri=.referrer",
+			"redirect": "/login",
 			"statusCode": 302
 		}
 	}
