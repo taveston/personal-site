@@ -3,8 +3,7 @@
 	"routes": [
 		{
 			"route": "/login",
-			"rewrite": "/.auth/login/aad",
-			"allowedRoles": ["reader"]
+			"rewrite": "/.auth/login/aad"
 		},
 		{
 			"route": "/cv",
