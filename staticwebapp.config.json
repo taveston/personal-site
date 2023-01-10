@@ -2,16 +2,14 @@
 	"trailingSlash": "auto",
 	"routes": [
 		{
-			"route": "/*",
+			"route": "/",
+			"redirect": "/cv",
 			"allowedRoles": ["authenticated"]
 		},
 		{
-			"route": "/",
-			"redirect": "/cv"
-		},
-		{
 			"route": "/cv",
-			"rewrite": "cv.html"
+			"rewrite": "cv.html",
+			"allowedRoles": ["authenticated"]
 		}
 	],
 	"responseOverrides": {
