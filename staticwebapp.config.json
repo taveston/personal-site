@@ -3,15 +3,18 @@
 	"routes": [
 		{
 			"route": "/login",
-			"rewrite": "/.auth/login/aad"
+			"rewrite": "/.auth/login/aad",
+			"allowedRoles": ["reader"]
 		},
 		{
 			"route": "/cv",
-			"rewrite": "index.html"
+			"rewrite": "index.html",
+			"allowedRoles": ["reader"]
 		},
 		{
 			"route": "/",
-			"redirect": "/cv"
+			"redirect": "/cv",
+			"allowedRoles": ["reader"]
 		},
 		{
 			"route": "/*",
