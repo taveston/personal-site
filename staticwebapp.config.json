@@ -1,0 +1,23 @@
+{
+	"trailingSlash": "auto",
+	"routes": [
+		{
+			"route": "/*",
+			"allowedRoles": ["authenticated"]
+		},
+		{
+			"route": "/",
+			"redirect": "/cv"
+		},
+		{
+			"route": "/cv",
+			"rewrite": "cv.html"
+		}
+	],
+	"responseOverrides": {
+		"401": {
+			"redirect": "/.auth/login/github?post_login_redirect_uri=.referrer",
+			"statusCode": 302
+		}
+	}
+}
