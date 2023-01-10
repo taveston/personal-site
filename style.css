@@ -9,9 +9,11 @@ body {
 	font-weight: 200;
 	background-image: url("fen.jpg");
 	background-attachment: fixed;
+	background-size: cover;
 	color: #ebdbb2;
 	padding: 0;
 	margin: 0;
+	line-height: 1.1;
 }
 
 a {
@@ -43,6 +45,10 @@ h1 small, h2 small, h3 small, h4 small {
 	font-weight: 200;
 }
 
+main {
+	line-height: 1.2em;
+}
+
 main > section {
 	padding: 1em 2em;
 	border-radius: 1em;
@@ -51,8 +57,12 @@ main > section > h2:first-child {
 	margin-top: 0;
 }
 
+main > section > p:first-child {
+	margin-top: 0;
+}
+
 hr {
-	border: 0pt solid #a89984;
+	border: 0pt solid #a8998420;
 	border-bottom-width: 1pt;
 	margin: 0 1em;
 }
@@ -96,6 +106,7 @@ ul.horizontal li + li::before {
 }
 .timeline .company {
 	font-weight: 600;
+	padding-bottom: .4em;
 }
 .timeline .title {
 	font-weight: 300;
@@ -151,7 +162,9 @@ a.social-link:hover svg  {
 
 #banner-content {
 	display: flex;
-	height: 18em;
+	height: 14em;
+	padding-top: 3em;
+	padding-bottom: 1em;
 	flex-direction: column;
 	align-items: stretch;
 	justify-content: center;
@@ -164,20 +177,21 @@ a.social-link:hover svg  {
 #banner-content > * {
 	display: flex;
 	justify-content: center;
-	margin: 0;
+	margin: .2em 0;
 	padding: 0;
+	letter-spacing: 0.08em;
+}
+
+#banner.image-banner #banner-content > * {
 	padding-left: 15%;
 }
 
 #tagline {
 	position: relative;
-	top: -0.8em;
-	letter-spacing: 0.08em;
 }
 
 #banner-content nav {
 	background-color: #665c54;
-	margin: 0;
 	border: solid #a89984;
 	border-width: 1pt 0;
 }
@@ -192,6 +206,10 @@ a.social-link:hover svg  {
 #banner-content nav menu li {
 	display: block;
 	margin: 1em;
+}
+
+#banner-content nav menu li.separator {
+	border-left: 1pt solid #a8998450;
 }
 
 #banner-content nav menu li a {
@@ -216,7 +234,7 @@ a.social-link:hover svg  {
 	border-radius: 100%;
 	object-fit: cover;
 	object-position: 0 22%;
-	filter: brightness(79%) contrast(107%) sepia(35%);
+	filter: brightness(90%) sepia(25%);
 }
 
 /* Briefly flash the background of target element when an anchor link is clicked */
@@ -225,12 +243,10 @@ a.social-link:hover svg  {
 }
 
 @keyframes target-fade {
-    from { background-color: transparent }
+	from { background-color: transparent }
 	40% { background-color: #665c54 }
 	to { background-color: transparent }
 }
-
-/* Adjust banner layout for smaller screens */
 
 @media (max-width: 1100px) {
 	#content-wrapper {
@@ -247,7 +263,10 @@ a.social-link:hover svg  {
 		left: 2em;
 	}
 }
-@media (max-width: 750px) {
+@media (max-width: 800px) {
+	body {
+		font-size: large;
+	}
 	#profile-image {
 		position: static;
 		justify-content: center;
@@ -259,12 +278,15 @@ a.social-link:hover svg  {
 		padding-top: 2em;
 	}
 	#banner-content {
+		padding-top: 0;
 		height: auto;
 	}
-	#banner-content > * {
+	#banner.image-banner #banner-content > * {
 		padding-left: 0;
 	}
-
+	main > section {
+		padding: 1em;
+	}
 	.twin-column {
 		display: block;
 	}
@@ -272,4 +294,13 @@ a.social-link:hover svg  {
 		max-width: none;
 	}
 }
-
+@media (max-width: 360px) {
+	body {
+		font-size: medium;
+	}
+	#content-wrapper {
+		margin: 0;
+		border-radius: 0;
+		border-width: 0;
+	}
+}
