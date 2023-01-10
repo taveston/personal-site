@@ -7,7 +7,7 @@ body {
 	font-family: 'Inter', sans-serif;
 	font-size: larger;
 	font-weight: 200;
-	background-image: url("../img/fen.jpg");
+	background-image: url("/img/fen.jpg");
 	background-attachment: fixed;
 	background-size: cover;
     background-color: #282828;
