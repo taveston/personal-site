@@ -24,7 +24,7 @@
 		}
 	</script>
 </html>
-<body>
+<body onload="apply_theme(document.getElementById('style-picker').value)">
 	<div id="content-wrapper">
 		<select id="style-picker" onchange="apply_theme(this.value)">
 			<option value="fancy">Fancy</option>
