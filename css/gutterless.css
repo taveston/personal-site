@@ -164,7 +164,7 @@ a.social-link:hover svg  {
 }
 
 #content-wrapper {
-	width: 55em;
+	width: 48em;
 	margin: 1em auto;
 	border-radius: .3em;
 }
@@ -260,7 +260,7 @@ a.social-link:hover svg  {
 
 @media (max-width: 1100px) {
 	#content-wrapper {
-		margin: 1em 1em;
+		margin: 0;
 		width: auto;
 	}
 	#banner {
@@ -276,6 +276,9 @@ a.social-link:hover svg  {
 @media (max-width: 800px) {
 	body {
 		font-size: large;
+	}
+	#content-wrapper {
+		padding-top: 23em;
 	}
 	#profile-image {
 		position: static;

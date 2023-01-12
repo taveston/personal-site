@@ -238,7 +238,8 @@ a.social-link:hover svg  {
 	border-radius: 100%;
 	object-fit: cover;
 	object-position: 0 22%;
-	filter: brightness(90%) sepia(25%);
+	filter: brightness(85%) contrast(105%) sepia(30%);
+	content: url("/img/profile.jpg");
 }
 
 /* Briefly flash the background of target element when an anchor link is clicked */
