@@ -1,0 +1,29 @@
+{
+	"trailingSlash": "auto",
+	"routes": [
+		{
+			"route": "/login",
+			"rewrite": "/.auth/login/aad"
+		},
+		{
+			"route": "/cv",
+			"rewrite": "index.html",
+			"allowedRoles": ["reader"]
+		},
+		{
+			"route": "/",
+			"redirect": "/cv",
+			"allowedRoles": ["reader"]
+		},
+		{
+			"route": "/*",
+			"allowedRoles": ["reader"]
+		}
+	],
+	"responseOverrides": {
+		"401": {
+			"redirect": "/login",
+			"statusCode": 302
+		}
+	}
+}

@@ -1,18 +1,40 @@
+<!DOCTYPE html>
 <html>
 	<title>Tom Aveston | CV</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet" />
 	<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Titillium+Web:wght@200;300;400;600&display=swap');</style>
-	<link rel="stylesheet" href="style.css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-</html>
-<body>
-	<div id="content-wrapper">
+	<!--<link rel="stylesheet" href="/css/style.css" />-->
+	<link rel="stylesheet" href="/css/debug.css" />
+	<link rel="stylesheet" title="fancy" href="/css/fancy.css" />
+	<link rel="alternate stylesheet" title="fancy-hay" href="/css/fancy-hay.css" disabled />
+	<link rel="alternate stylesheet" title="plain" href="/css/plain.css" disabled />
+	<link rel="alternate stylesheet" title="gutterless" href="/css/gutterless.css" disabled />
 
+	<script type="text/javascript">
+		function apply_theme(theme) {
+			let selector = "link[title][rel='alternate stylesheet'], link[title][rel=stylesheet]";
+			let stylesheets = document.querySelectorAll(selector);
+			for (var link of stylesheets) {
+				link.disabled = link.title !== theme;
+			}
+		}
+	</script>
+</html>
+<body onload="apply_theme(document.getElementById('style-picker').value)">
+	<div id="content-wrapper">
+		<select id="style-picker" onchange="apply_theme(this.value)">
+			<option value="fancy">Fancy</option>
+			<option value="fancy-hay">Fancy alternate</option>
+			<option value="plain">Plain</option>
+			<option value="gutterless">Gutterless</option>
+		</select>
 		<header id="banner" class="image-banner">
 			<div id="profile-image">
-				<img src="profile-colour.jpg" alt="Portrait photograph of Tom Aveston" />
+				<img src="/img/profile-colour.jpg" alt="Portrait photograph of Tom Aveston" />
 			</div>
 			<div id="banner-content">
 				<h1>Tom Aveston</h1>
@@ -59,8 +81,8 @@
 							<li>C/C++</li>
 							<li>JavaScript/TypeScript</li>
 							<li>Kotlin</li>
-							<li>Experienced with many others including COBOL, Swift, Java, Python,
-								and Rust.</li>
+							<li>Commercial experience with many others including COBOL, Swift, Java,
+								and Python.</li>
 						</ul>
 					</section>
 				</div>
@@ -76,8 +98,9 @@
 							<div class="title">Software Developer <small class="period">2014-2019</small></div>
 						</h3>
 						<p>
-                            Participated in the maintenance and development of the UL 360 suite of
-                            ESG and sustainability software, within an agile environment.
+                            Participated in the maintenance and development of the substantial
+							UL 360 suite of ESG and sustainability software, within an agile
+							environment.
 						</p>
                         <ul>
                             <li>

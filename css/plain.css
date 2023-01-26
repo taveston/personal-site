@@ -7,9 +7,9 @@ body {
 	font-family: 'Inter', sans-serif;
 	font-size: larger;
 	font-weight: 200;
-	background-image: url("fen.jpg");
 	background-attachment: fixed;
 	background-size: cover;
+    background-color: #282828;
 	color: #ebdbb2;
 	padding: 0;
 	margin: 0;
@@ -150,14 +150,17 @@ a.social-link:hover svg  {
 
 /* Page specific layout */
 
+#banner {
+	filter: drop-shadow(0px 0px 1em #282828e0);
+}
+
 #content-wrapper {
 	width: 55em;
-	margin: 1em auto;
-	background-color: #50494590;
+	margin: 0 auto;
+	background-color: #504945;
 	backdrop-filter: blur(10px);
 	filter: drop-shadow(0px 0px 1em black);
-	border-radius: .3em;
-	border: 1pt solid #282828;
+	border: 1pt solid #28282840;
 }
 
 #banner-content {
@@ -234,7 +237,8 @@ a.social-link:hover svg  {
 	border-radius: 100%;
 	object-fit: cover;
 	object-position: 0 22%;
-	filter: brightness(90%) sepia(25%);
+	filter: brightness(85%) contrast(105%) sepia(30%);
+	content: url("/img/profile.jpg");
 }
 
 /* Briefly flash the background of target element when an anchor link is clicked */
@@ -250,7 +254,7 @@ a.social-link:hover svg  {
 
 @media (max-width: 1100px) {
 	#content-wrapper {
-		margin: 1em 1em;
+		margin: 0 1em;
 		width: auto;
 	}
 	#banner {
