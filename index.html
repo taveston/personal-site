@@ -7,204 +7,188 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet" />
 	<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Titillium+Web:wght@200;300;400;600&display=swap');</style>
-	<!--<link rel="stylesheet" href="/css/style.css" />-->
-	<link rel="stylesheet" href="/css/debug.css" />
-	<link rel="stylesheet" title="fancy" href="/css/fancy.css" />
-	<link rel="alternate stylesheet" title="fancy-hay" href="/css/fancy-hay.css" disabled />
-	<link rel="alternate stylesheet" title="plain" href="/css/plain.css" disabled />
-	<link rel="alternate stylesheet" title="gutterless" href="/css/gutterless.css" disabled />
-
-	<script type="text/javascript">
-		function apply_theme(theme) {
-			let selector = "link[title][rel='alternate stylesheet'], link[title][rel=stylesheet]";
-			let stylesheets = document.querySelectorAll(selector);
-			for (var link of stylesheets) {
-				link.disabled = link.title !== theme;
-			}
-		}
-	</script>
+	<link rel="stylesheet" href="/css/style.css" />
 </html>
-<body onload="apply_theme(document.getElementById('style-picker').value)">
-	<div id="content-wrapper">
-		<select id="style-picker" onchange="apply_theme(this.value)">
-			<option value="fancy">Fancy</option>
-			<option value="fancy-hay">Fancy alternate</option>
-			<option value="plain">Plain</option>
-			<option value="gutterless">Gutterless</option>
-		</select>
-		<header id="banner" class="image-banner">
-			<div id="profile-image">
-				<img src="/img/profile-colour.jpg" alt="Portrait photograph of Tom Aveston" />
+<body>
+	<header id="banner" class="image-banner">
+		<div id="profile-image">
+			<img src="/img/profile-colour.jpg" alt="Portrait photograph of Tom Aveston" />
+		</div>
+		<div id="banner-content">
+			<h1>Tom Aveston</h1>
+			<ul id="tagline" class="horizontal">
+				<li>Full stack developer</li>
+				<li>Cambridge, UK</li>
+			</ul>
+			<nav>
+				<menu>
+					<li><a href="#about"/>About</a></li>
+					<li><a href="#experience"/>Experience</a></li>
+					<li><a href="#contact"/>Contact</a></li>
+				</menu>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<section id="about" class="anchor-target">
+			<p>
+				I am a highly experienced full stack developer based near Cambridge, with over 17
+				years commercial experience working on projects of all sizes. I am adept at
+				problem solving and have a proven track record of delivering high-quality,
+				robust and scalable solutions.
+			</p>
+
+			<div class="twin-column">
+				<section>
+					<h3>Skills</h3>
+					<ul>
+						<li>Web front-end development (incl. React)</li>
+						<li>Micro-service development (.NET Core)</li>
+						<li>Native mobile app development (Android, iOS)</li>
+						<li>Cloud computing (Azure)</li>
+						<li>Desktop application development (Windows Forms, WPF)</li>
+						<li>Containers (Docker, Kubernetes)</li>
+						<li>Relational DBMS (incl. Oracle, SQL Server)</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Programming languages</h3>
+					<ul>
+						<li>C#</li>
+						<li>C/C++</li>
+						<li>JavaScript/TypeScript</li>
+						<li>Kotlin</li>
+						<li>Commercial experience with many others including COBOL, Swift, Java,
+							and Python.</li>
+					</ul>
+				</section>
 			</div>
-			<div id="banner-content">
-				<h1>Tom Aveston</h1>
-				<ul id="tagline" class="horizontal">
-					<li>Full stack developer</li>
-					<li>Cambridge, UK</li>
-				</ul>
-				<nav>
-					<menu>
-						<li><a href="#about"/>About</a></li>
-						<li><a href="#experience"/>Experience</a></li>
-						<li><a href="#contact"/>Contact</a></li>
-					</menu>
-				</nav>
+		</section>
+		<hr />
+		<section id="experience" class="anchor-target">
+			<h2>Experience</h2>
+			<div class="timeline">
+				<section>
+					<h3>
+						<div class="company">UL (formally Credit360<a id="fn1-origin" href="#fn1" class="footnote-link">1</a>)</div>
+						<div class="title">Senior Software Engineer <small class="period">2019-present</small></div>
+						<div class="title">Software Developer <small class="period">2014-2019</small></div>
+					</h3>
+					<p>
+						Participated in the maintenance and development of the substantial
+						UL 360 suite of ESG and sustainability software, within an agile
+						environment.
+					</p>
+					<p>
+						Responsibilties included:
+					</p>
+					<ul>
+						<li>
+							Incremental migration of a large monolithic C# code base towards a
+							modern micro-service based architecture, resulting in improved
+							scalability and maintainability of the software.
+						</li>
+						<li>
+							Developing native mobile applications for Android and iOS, using
+							multi-platform Kotlin.
+						</li>
+						<li>
+							Acting as technical advisor and mentor to team members at various
+							levels, from entry-level to senior engineers, providing guidance and
+							feedback to help them grow and develop their skills.
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>
+						<div class="company">iCareHealth (formally HET Software<a id="fn2-origin" href="#fn2" class="footnote-link">2</a>)</div>
+						<div class="title">Senior Developer <small class="period">2012-2014</small></div>
+						<div class="title">Software Developer <small class="period">2009-2012</small></div>
+					</h3>
+					<p>
+						Senior member of an agile team of five, building software for the health
+						and social care sector.
+					</p>
+					<p>
+						Responsibilities included:
+					</p>
+					<ul>
+						<li>
+							Design and implementation of major cloud based applications, including a
+							mobile scheduling and monitoring application relied upon for the
+							provision of thousands of hours of home care per week.
+						</li>
+						<li>
+							Maintenance and ongoing development of the company’s flagship Windows
+							Forms/C# application.
+						</li>
+						<li>Producing design documentation for major projects.</li>
+						<li>Setting internal standards to ensure product quality and consistency.</li>
+						<li>Maintaining coding standards documentation.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>
+						<div class="company">Cyberaid</div>
+						<div class="title">Software Developer <small class="period">2006-2009</small></div>
+					</h3>
+					<p>
+						Part of a team of two in charge of maintaining the large COBOL code base that
+						comprised the company’s legacy payroll and human resources offering.
+					</p>
+					<p>
+						Other responsibilities included:
+					</p>
+					<ul>
+						<li>Design and implementation of bespoke web-based applications.</li>
+						<li>Provision of direct technical support to customers.</li>
+					</ul>
+				</section>
 			</div>
-		</header>
 
-		<main>
-			<section id="about" class="anchor-target">
-				<p>
-					I am a highly experienced full stack developer based near Cambridge, with over 17
-					years commercial experience working on projects of all sizes. I am adept at
-					problem solving and have a proven track record of delivering high-quality,
-					robust and scalable solutions.
-				</p>
+		</section>
+		<hr />
+		<section id="contact" class="anchor-target">
+			<h2>Contact</h2>
 
-				<div class="twin-column">
-					<section>
-						<h3>Skills</h3>
-						<ul>
-							<li>Web front-end development (incl. React)</li>
-							<li>Micro-service development</li>
-							<li>Native mobile app development (Android, iOS)</li>
-							<li>Cloud computing (Azure)</li>
-							<li>Desktop application development (Windows Forms, WPF)</li>
-							<li>Containers (Docker, Kubernetes)</li>
-							<li>Relational DBMS (incl. Oracle, SQL Server)</li>
-						</ul>
-					</section>
-					<section>
-						<h3>Programming languages</h3>
-						<ul>
-							<li>C#</li>
-							<li>C/C++</li>
-							<li>JavaScript/TypeScript</li>
-							<li>Kotlin</li>
-							<li>Commercial experience with many others including COBOL, Swift, Java,
-								and Python.</li>
-						</ul>
-					</section>
-				</div>
-			</section>
-			<hr />
-			<section id="experience" class="anchor-target">
-				<h2>Experience</h2>
-				<div class="timeline">
-					<section>
-						<h3>
-							<div class="company">UL (formally Credit360<a id="fn1-origin" href="#fn1" class="footnote-link">1</a>)</div>
-							<div class="title">Senior Software Engineer <small class="period">2019-present</small></div>
-							<div class="title">Software Developer <small class="period">2014-2019</small></div>
-						</h3>
-						<p>
-                            Participated in the maintenance and development of the substantial
-							UL 360 suite of ESG and sustainability software, within an agile
-							environment.
-						</p>
-                        <ul>
-                            <li>
-								Incremental migration of a large monolithic C# code base towards a
-                                modern micro-service based architecture, resulting in improved
-								scalability and maintainability of the software.
-							</li>
-                            <li>
-								Developing native mobile applications for Android and iOS, using
-								multi-platform Kotlin.
-							</li>
-							<li>
-								Acting as technical advisor and mentor to team members at various
-								levels, from entry-level to senior engineers, providing guidance and
-								feedback to help them grow and develop their skills.
-							</li>
-                        </ul>
-					</section>
+			<ul class="contact-list">
+				<li>
+					<a href="mailto:tom@aveston.uk" class="social-link">
+							<svg viewBox="0 0 512 512"><path d="m496.33 127.09-15.673 9.613-198.82 121.92c-7.983 4.859-16.917 7.293-25.84 7.293s-17.826-2.424-25.778-7.262l-0.136-0.084-198.73-123.8-15.673-9.759-15.674-9.77v302.72h512v-300.47l-15.673 9.603z"/><path d="m25.245 94.041 50.322 31.346 171.01 106.53c5.841 3.521 13.082 3.511 18.913-0.042l224.77-137.83h-465.01z"/></svg>
+						tom@aveston.uk
+					</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/tom-aveston"
+						class="social-link" title="LinkedIn">
 
-					<section>
-						<h3>
-							<div class="company">iCareHealth (formally HET Software<a id="fn2-origin" href="#fn2" class="footnote-link">2</a>)</div>
-							<div class="title">Senior Developer <small class="period">2012-2014</small></div>
-							<div class="title">Software Developer <small class="period">2009-2012</small></div>
-						</h3>
-						<p>
-							Senior member of an agile team of five, building software for the health
-							and social care sector. Responsibilities included:
-						</p>
-						<ul>
-							<li>
-								Design and implementation of major cloud based applications, including a
-								mobile scheduling and monitoring application relied upon for the
-								provision of thousands of hours of home care per week.
-							</li>
-							<li>
-								Maintenance and ongoing development of the company’s flagship Windows
-								Forms/C# application.
-							</li>
-							<li>Producing design documentation for major projects.</li>
-							<li>Setting internal standards to ensure product quality and consistency.</li>
-							<li>Maintaining coding standards documentation.</li>
-						</ul>
-					</section>
-
-					<section>
-						<h3>
-							<div class="company">Cyberaid</div>
-							<div class="title">Software Developer <small class="period">2006-2009</small></div>
-						</h3>
-						<p>
-							Part of a team of two in charge of maintaining the large COBOL code base that
-							comprised the company’s legacy payroll and human resources offering.
-							Other responsibilities included:
-						</p>
-						<ul>
-							<li>Design and implementation of bespoke web-based applications.</li>
-							<li>Provision of direct technical support to customers.</li>
-						</ul>
-					</section>
-				</div>
-
-			</section>
-			<hr />
-			<section id="contact" class="anchor-target">
-				<h2>Contact</h2>
-
-				<ul class="contact-list">
-					<li>
-						<a href="mailto:tom@aveston.dev" class="social-link">
-								<svg viewBox="0 0 512 512"><path d="m496.33 127.09-15.673 9.613-198.82 121.92c-7.983 4.859-16.917 7.293-25.84 7.293s-17.826-2.424-25.778-7.262l-0.136-0.084-198.73-123.8-15.673-9.759-15.674-9.77v302.72h512v-300.47l-15.673 9.603z"/><path d="m25.245 94.041 50.322 31.346 171.01 106.53c5.841 3.521 13.082 3.511 18.913-0.042l224.77-137.83h-465.01z"/></svg>
-							tom@aveston.uk
-						</a>
-					</li>
-					<li>
-						<a href="https://www.linkedin.com/in/tom-aveston"
-							class="social-link" title="LinkedIn">
-
-							<svg viewBox="0 0 310 310"><path d="m72.16 99.73h-62.233c-2.762 0-5 2.239-5 5v199.93c0 2.762 2.238 5 5 5h62.233c2.762 0 5-2.238 5-5v-199.93c0-2.761-2.238-5-5-5z"/><path d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4 c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"/><path d="m230.45 94.761c-24.995 0-43.472 10.745-54.679 22.954v-12.985c0-2.761-2.238-5-5-5h-59.599c-2.762 0-5 2.239-5 5v199.93c0 2.762 2.238 5 5 5h62.097c2.762 0 5-2.238 5-5v-98.918c0-33.333 9.054-46.319 32.29-46.319 25.306 0 27.317 20.818 27.317 48.034v97.204c0 2.762 2.238 5 5 5h62.12c2.762 0 5-2.238 5-5v-109.66c0-49.565-9.451-100.23-79.546-100.23z"/></svg>
-							linkedin.com/in/tom-aveston
-						</a>
-					</li>
-					<li>
-						<a href="https://github.com/taveston" title="GitHub" class="social-link">
-							<svg viewBox="0 0 96 96"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/></svg>
-							github.com/taveston
-						</a>
-					</li>
-				</ul>
-			</section>
-			<hr />
-			<section id="footnotes">
-				<ol class="footnote-list">
-					<li id="fn1" class="anchor-target">
-						Credit360 was acquired by UL in Febuary 2016. <a href="#fn1-origin">^</a>
-					</li>
-					<li id="fn2" class="anchor-target">
-						HET Software merged with iCare Solutions in 2013. <a href="#fn2-origin">^</a>
-					</li>
-				</ol>
-			</section>
-		</main>
-		<footer>
-			<small>© 2023 Tom Aveston</small>
-		</footer>
-	</div>
+						<svg viewBox="0 0 310 310"><path d="m72.16 99.73h-62.233c-2.762 0-5 2.239-5 5v199.93c0 2.762 2.238 5 5 5h62.233c2.762 0 5-2.238 5-5v-199.93c0-2.761-2.238-5-5-5z"/><path d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4 c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"/><path d="m230.45 94.761c-24.995 0-43.472 10.745-54.679 22.954v-12.985c0-2.761-2.238-5-5-5h-59.599c-2.762 0-5 2.239-5 5v199.93c0 2.762 2.238 5 5 5h62.097c2.762 0 5-2.238 5-5v-98.918c0-33.333 9.054-46.319 32.29-46.319 25.306 0 27.317 20.818 27.317 48.034v97.204c0 2.762 2.238 5 5 5h62.12c2.762 0 5-2.238 5-5v-109.66c0-49.565-9.451-100.23-79.546-100.23z"/></svg>
+						linkedin.com/in/tom-aveston
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/taveston" title="GitHub" class="social-link">
+						<svg viewBox="0 0 96 96"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/></svg>
+						github.com/taveston
+					</a>
+				</li>
+			</ul>
+		</section>
+		<hr />
+		<section id="footnotes">
+			<ol class="footnote-list">
+				<li id="fn1" class="anchor-target">
+					Credit360 was acquired by UL in Febuary 2016. <a href="#fn1-origin">^</a>
+				</li>
+				<li id="fn2" class="anchor-target">
+					HET Software merged with iCare Solutions in 2013. <a href="#fn2-origin">^</a>
+				</li>
+			</ol>
+		</section>
+	</main>
+	<footer>
+		<small>© 2023 Tom Aveston</small>
+	</footer>
 </body>
