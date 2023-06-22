@@ -2,28 +2,15 @@
 	"trailingSlash": "auto",
 	"routes": [
 		{
-			"route": "/login",
-			"rewrite": "/.auth/login/aad"
-		},
-		{
 			"route": "/cv",
-			"rewrite": "index.html",
-			"allowedRoles": ["reader"]
+			"rewrite": "index.html"
 		},
 		{
 			"route": "/",
-			"redirect": "/cv",
-			"allowedRoles": ["reader"]
+			"redirect": "/cv"
 		},
 		{
-			"route": "/*",
-			"allowedRoles": ["reader"]
+			"route": "/*"
 		}
-	],
-	"responseOverrides": {
-		"401": {
-			"redirect": "/login",
-			"statusCode": 302
-		}
-	}
+	]
 }
