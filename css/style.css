@@ -300,17 +300,15 @@ main {
 	}
 }
 
+@media screen {
+	.print-only {
+		display: none !important;
+	}
+}
+
 @media print {
-	#banner-content nav {
-		display: none;
-	}
-
-	footer {
-		display: none;
-	}
-
-	li.anchor-target a {
-		display: none;
+	.screen-only {
+		display: none !important;
 	}
 
 	#profile-image img {
