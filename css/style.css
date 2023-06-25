@@ -53,10 +53,6 @@ main > section {
 	padding: 1em 2em;
 	border-radius: 1em;
 }
-main > section > h2:first-child {
-	margin-top: 0;
-}
-
 main > section > p:first-child {
 	margin-top: 0;
 }
@@ -99,10 +95,15 @@ ul.horizontal li + li::before {
 .timeline {
 	padding-left: 0.5em;
 }
-.timeline section {
+.timeline section:first-child {
 	margin-top: 2.5em;
+}
+.timeline section {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	padding-left: 1em;
 	border-left: 5pt solid #665c54;
+	page-break-inside: avoid;
 }
 .timeline .company {
 	font-weight: 600;
@@ -182,7 +183,7 @@ main {
 }
 
 #banner.image-banner #banner-content > * {
-	padding-left: 15%;
+	padding-left: 150px;
 }
 
 #tagline {
@@ -248,7 +249,7 @@ main {
 	to { background-color: transparent }
 }
 
-@media (max-width: 1100px) {
+@media screen and (max-width: 1100px) {
 	main {
 		margin: 0 1em;
 		width: auto;
@@ -257,7 +258,7 @@ main {
 		font-size: 0.85em;
 	}
 }
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
 	body {
 		font-size: large;
 	}
@@ -288,7 +289,7 @@ main {
 		max-width: none;
 	}
 }
-@media (max-width: 360px) {
+@media screen and (max-width: 360px) {
 	body {
 		font-size: medium;
 	}
@@ -296,5 +297,44 @@ main {
 		margin: 0;
 		border-radius: 0;
 		border-width: 0;
+	}
+}
+
+@media print {
+	#banner-content nav {
+		display: none;
+	}
+
+	footer {
+		display: none;
+	}
+
+	li.anchor-target a {
+		display: none;
+	}
+
+	#profile-image img {
+		filter: none;
+		border-color: #3c3836;
+		border-width: 2pt;
+	}
+
+	body {
+		background-color: #fff;
+		color: #3c3836;
+	}
+
+	a {
+		color: #3c3836;
+	}
+
+	a.social-link svg  {
+		fill: #3c3836;
+	}
+
+	main {
+		border: 0pt solid #a8998420;
+		border-top-width: 1pt;
+		font-size: 15pt;
 	}
 }
