@@ -9,21 +9,21 @@ body {
 	font-weight: 200;
 	background-attachment: fixed;
 	background-size: cover;
-	background-color: #504945;
-	color: #ebdbb2;
+	background-color: #1e2b39;
+	color: #f5eee1;
 	padding: 0;
 	margin: 0;
 	line-height: 1.1;
 }
 
 a {
-	color: #83a598;
+	color: #8a9db2;
 	text-decoration: none;
 	font-weight: 400;
 }
 
 a:hover {
-	color: #458588;
+	color: #b5cee8;
 }
 
 ul li, ol li {
@@ -34,6 +34,7 @@ header, h1, h2, h3, h4 {
 	font-family: 'Titillium Web', sans-serif;
 	letter-spacing: 0.06em;
 	font-weight: 400;
+	color: #8a9db2
 }
 
 h1 {
@@ -41,7 +42,6 @@ h1 {
 }
 
 h1 small, h2 small, h3 small, h4 small {
-	color: #a89984;
 	font-weight: 200;
 }
 
@@ -58,15 +58,15 @@ main > section > p:first-child {
 }
 
 hr {
-	border: 0pt solid #a8998420;
+	border: 0pt solid #8a9db220;
 	border-bottom-width: 1pt;
 	margin: 0 1em;
 }
 
 footer {
-	border-top: 1pt solid #665c54;
+	border-top: 1pt solid #8a9db220;
 	padding: 1em;
-	color: #a89984;
+	color: #8a9db290;
 	font-size: smaller;
 	text-align: center;
 }
@@ -102,7 +102,7 @@ ul.horizontal li + li::before {
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
 	padding-left: 1em;
-	border-left: 5pt solid #665c54;
+	border-left: 5pt solid #8a9db280;
 	page-break-inside: avoid;
 }
 .timeline .company {
@@ -113,17 +113,13 @@ ul.horizontal li + li::before {
 	font-weight: 300;
 }
 .timeline .period {
-	color: #a89984;
+	color: #8a9db2a0;
 	font-weight: 200;
 	font-size: smaller;
 }
 
 ol.footnote-list {
 	font-size: 0.7em;
-}
-
-ul.contact-list {
-
 }
 
 ul.contact-list li {
@@ -133,12 +129,12 @@ ul.contact-list li {
 a.social-link svg {
 	width: 1em;
 	height: 1em;
-	fill: #83a598;
+	fill: #8a9db2;
 	margin-right: .5em;
 }
 
 a.social-link:hover svg  {
-	fill: #458588;
+	fill: #b5cee8;
 }
 
 .twin-column {
@@ -152,7 +148,7 @@ a.social-link:hover svg  {
 /* Page specific layout */
 
 #banner #profile-image {
-	filter: drop-shadow(0px 0px 1em #282828e0);
+	filter: drop-shadow(0px 0px 1em #101010a0);
 }
 
 main {
@@ -191,9 +187,11 @@ main {
 }
 
 #banner-content nav {
-	background-color: #665c54;
-	border: solid #a89984;
+	background-color: #3a3f4b;
+	border: solid #8a9db2;
 	border-width: 1pt 0;
+	filter: drop-shadow(0px 0px 1em #101010a0);
+	z-index: 0;
 }
 
 #banner-content nav menu {
@@ -201,15 +199,10 @@ main {
 	padding: 0;
 	margin: 0;
 	text-transform: uppercase;
-	z-index: 1;
 }
 #banner-content nav menu li {
 	display: block;
 	margin: 1em;
-}
-
-#banner-content nav menu li.separator {
-	border-left: 1pt solid #a8998450;
 }
 
 #banner-content nav menu li a {
@@ -222,6 +215,8 @@ main {
 	right: 0;
 	display: flex;
 	justify-content: center;
+	z-index: 1;
+	pointer-events: none;
 }
 
 #profile-image img {
@@ -230,12 +225,12 @@ main {
 	top: 3em;
 	height: 13em;
 	width: 13em;
-	border: 3pt solid #ebdbb2;
+	border: 3pt solid #8a9db2;
 	border-radius: 100%;
 	object-fit: cover;
 	object-position: 0 22%;
-	filter: brightness(85%) contrast(105%) sepia(35%);
-	content: url("/img/profile.jpg");
+	filter: brightness(85%) contrast(105%);
+	content: url("../img/profile.jpg");
 }
 
 /* Briefly flash the background of target element when an anchor link is clicked */
@@ -245,7 +240,7 @@ main {
 
 @keyframes target-fade {
 	from { background-color: transparent }
-	40% { background-color: #665c54 }
+	40% { background-color: #8a9db230 }
 	to { background-color: transparent }
 }
 
@@ -328,6 +323,10 @@ main {
 
 	a.social-link svg  {
 		fill: #3c3836;
+	}
+
+	header, h1, h2, h3, h4 {
+		color: #8a9db2
 	}
 
 	main {
