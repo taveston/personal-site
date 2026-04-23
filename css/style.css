@@ -103,7 +103,7 @@ ul.horizontal li + li::before {
 	margin-bottom: 1.5em;
 	padding-left: 1em;
 	border-left: 5pt solid #8a9db280;
-	page-break-inside: avoid;
+	page-break-inside: auto;
 }
 .timeline .company {
 	font-weight: 600;
