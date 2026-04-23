@@ -50,7 +50,7 @@ main {
 }
 
 main > section {
-	padding: 0.5em 2em;
+	padding: 1em 2em;
 	border-radius: 1em;
 }
 main > section > p:first-child {
@@ -96,7 +96,7 @@ ul.horizontal li + li::before {
 	padding-left: 0.5em;
 }
 .timeline section:first-child {
-	margin-top: 2.5em;
+	margin-top: 0;
 }
 .timeline section {
 	margin-top: 1.5em;
